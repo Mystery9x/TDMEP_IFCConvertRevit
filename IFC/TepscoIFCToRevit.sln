@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TepscoIFCToRevit", "TepscoIFCToRevit\TepscoIFCToRevit.csproj", "{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TepscoIFCToRevit_Installer_2020", "Installer\2020\TepscoIFCToRevit_Installer_2020\TepscoIFCToRevit_Installer_2020.vdproj", "{DBB6A477-0552-43E4-A270-D0DDB435EBFF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TepscoIFCToRevit_Installer_2023", "Installer\2023\TepscoIFCToRevit_Installer_2023\TepscoIFCToRevit_Installer_2023.vdproj", "{2705553F-A9A8-4F21-B91E-12BADCE2C2D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_2020|Any CPU = Debug_2020|Any CPU
+		Debug_2023|Any CPU = Debug_2023|Any CPU
+		Release_2020|Any CPU = Release_2020|Any CPU
+		Release_2023|Any CPU = Release_2023|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Debug_2020|Any CPU.ActiveCfg = Debug_2020|Any CPU
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Debug_2020|Any CPU.Build.0 = Debug_2020|Any CPU
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Debug_2023|Any CPU.ActiveCfg = Debug_2023|Any CPU
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Debug_2023|Any CPU.Build.0 = Debug_2023|Any CPU
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Release_2020|Any CPU.ActiveCfg = Release_2020|Any CPU
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Release_2020|Any CPU.Build.0 = Release_2020|Any CPU
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Release_2023|Any CPU.ActiveCfg = Release_2023|Any CPU
+		{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}.Release_2023|Any CPU.Build.0 = Release_2023|Any CPU
+		{DBB6A477-0552-43E4-A270-D0DDB435EBFF}.Debug_2020|Any CPU.ActiveCfg = Debug
+		{DBB6A477-0552-43E4-A270-D0DDB435EBFF}.Debug_2023|Any CPU.ActiveCfg = Debug
+		{DBB6A477-0552-43E4-A270-D0DDB435EBFF}.Release_2020|Any CPU.ActiveCfg = Release
+		{DBB6A477-0552-43E4-A270-D0DDB435EBFF}.Release_2020|Any CPU.Build.0 = Release
+		{DBB6A477-0552-43E4-A270-D0DDB435EBFF}.Release_2023|Any CPU.ActiveCfg = Release
+		{2705553F-A9A8-4F21-B91E-12BADCE2C2D4}.Debug_2020|Any CPU.ActiveCfg = Debug
+		{2705553F-A9A8-4F21-B91E-12BADCE2C2D4}.Debug_2023|Any CPU.ActiveCfg = Debug
+		{2705553F-A9A8-4F21-B91E-12BADCE2C2D4}.Release_2020|Any CPU.ActiveCfg = Release
+		{2705553F-A9A8-4F21-B91E-12BADCE2C2D4}.Release_2023|Any CPU.ActiveCfg = Release
+		{2705553F-A9A8-4F21-B91E-12BADCE2C2D4}.Release_2023|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C16F5CDA-2EE9-45E1-803E-F6A693AC7F18}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+      None
+    </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug_2020</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4DD5EFC-FAB4-439D-9641-382324BD3B6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TepscoIFCToRevit</RootNamespace>
+    <AssemblyName>TepscoIFCToRevit</AssemblyName>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_2020|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Output\Debug_2020\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_2020</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_2023|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Output\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_2023</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_2020|AnyCPU'">
+    <OutputPath>Output\Release_2020\TepscoIFCToRevit\</OutputPath>
+    <DefineConstants>TRACE;RELEASE_2020</DefineConstants>
+    <Optimize>false</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_2023|AnyCPU'">
+    <OutputPath>Output\$(Configuration)\TepscoIFCToRevit\</OutputPath>
+    <DefineConstants>TRACE;RELEASE_2023</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.9.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.9.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshDecimator">
+      <HintPath>..\Libs\MeshDecimator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="AdWindows">
+      <HintPath>3rdParty\$(Configuration)\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI, Version=20.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>3rdParty\$(Configuration)\RevitAPI.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC">
+      <HintPath>3rdParty\$(Configuration)\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>3rdParty\$(Configuration)\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitUtilities">
+      <HintPath>3rdParty\$(Configuration)\RevitUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.6.0.1\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Command\IFCConvertCommand.cs" />
+    <Compile Include="Command\JoinGeometryCommand.cs" />
+    <Compile Include="Command\LoginLicenseCommand.cs" />
+    <Compile Include="Command\MappingSettingCommand.cs" />
+    <Compile Include="Command\ObjectListCommand.cs" />
+    <Compile Include="Common\CheckLicenseUltils.cs" />
+    <Compile Include="Common\ComparerUtils\CurveEqualityComparer.cs" />
+    <Compile Include="Common\ComparerUtils\DefaultObjectComparer.cs" />
+    <Compile Include="Common\ComparerUtils\DistanceEqualityComparer.cs" />
+    <Compile Include="Common\ComparerUtils\FaceComparer.cs" />
+    <Compile Include="Common\ComparerUtils\ParameterDataComparer.cs" />
+    <Compile Include="Common\ComparerUtils\PipeEqualityComparer.cs" />
+    <Compile Include="Common\ComparerUtils\PointEqualityComparer.cs" />
+    <Compile Include="Common\ComparerUtils\VectorEqualityComparer.cs" />
+    <Compile Include="Common\ConvexHull.cs" />
+    <Compile Include="Common\DisplayServices.cs" />
+    <Compile Include="Common\ElementQueryUtils.cs" />
+    <Compile Include="Common\Extension.cs" />
+    <Compile Include="Common\FileUtils.cs" />
+    <Compile Include="Common\GeometryUtils.cs" />
+    <Compile Include="Common\RevitUtils.cs" />
+    <Compile Include="Common\RevitWarningUtils.cs" />
+    <Compile Include="Common\SimplifyUtility\ISimplifyUtility.cs" />
+    <Compile Include="Common\SimplifyUtility\Point.cs" />
+    <Compile Include="Common\SimplifyUtility\SimplifyUtility.cs" />
+    <Compile Include="Common\SimplifyUtility\SimplifyUtility3D.cs" />
+    <Compile Include="Data\AccessoryDatas\AccessoryData.cs" />
+    <Compile Include="Data\CableTraysData\CableTrayData.cs" />
+    <Compile Include="Data\ElementConvert.cs" />
+    <Compile Include="Data\ElementIFC.cs" />
+    <Compile Include="Data\EquipmentData\Electrical\ConduitTerminalBoxData.cs" />
+    <Compile Include="Data\EquipmentData\Electrical\ConduitTerminalPlacingData.cs" />
+    <Compile Include="Data\EquipmentData\PipingSupport\PipingSupportData.cs" />
+    <Compile Include="Data\EquipmentData\PipingSupport\PipingSupportPlacingData.cs" />
+    <Compile Include="Data\GeometryDatas\GeometryData.cs" />
+    <Compile Include="Data\GeometryDatas\MeshPlaneData.cs" />
+    <Compile Include="Data\GeometryDatas\PlanarFaceData.cs" />
+    <Compile Include="Data\IFCConvertHandleData.cs" />
+    <Compile Include="Data\IFCObjectData.cs" />
+    <Compile Include="Data\MEPData\CommonDataPipeDuct.cs" />
+    <Compile Include="Data\MEPData\ElbowAtTheEndPipeData.cs" />
+    <Compile Include="Data\MEPData\TeeFittingData.cs" />
+    <Compile Include="Data\MEPData\TransitionFittingData.cs" />
+    <Compile Include="Data\MEPData\UtilsElbowData.cs" />
+    <Compile Include="Data\OpeningDatas\OpeningData.cs" />
+    <Compile Include="Data\RailingsData\CrossRailingData.cs" />
+    <Compile Include="Data\RailingsData\ElbowRaillingData.cs" />
+    <Compile Include="Data\RailingsData\FittingRallingData.cs" />
+    <Compile Include="Data\RailingsData\RailingData.cs" />
+    <Compile Include="Data\RailingsData\TeeRailingsData.cs" />
+    <Compile Include="Data\RevitLinkData\LinkElementData.cs" />
+    <Compile Include="Data\MEPData\DuctData.cs" />
+    <Compile Include="Data\MEPData\PipeData.cs" />
+    <Compile Include="Data\CableTraysData\RunConvertCableTrayObject.cs" />
+    <Compile Include="Data\RunConvertDuctObject.cs" />
+    <Compile Include="Data\RunConvertPipeObject.cs" />
+    <Compile Include="Data\SaveSettingData\SaveMappingSetting.cs" />
+    <Compile Include="Data\SaveSettingData\SaveSetting.cs" />
+    <Compile Include="Data\SaveSettingData\SaveSettingGrp.cs" />
+    <Compile Include="Data\SaveSettingData\SaveSettingLstObj.cs" />
+    <Compile Include="Data\SaveSettingData\SaveSettingObj.cs" />
+    <Compile Include="Data\SaveSettingData\SaveTypeElement.cs" />
+    <Compile Include="Data\SharedParamData.cs" />
+    <Compile Include="Data\StructuralData\ArchitectureColumnData.cs" />
+    <Compile Include="Data\StructuralData\BeamData.cs" />
+    <Compile Include="Data\StructuralData\CeilingData.cs" />
+    <Compile Include="Data\StructuralData\ColumnData.cs" />
+    <Compile Include="Data\StructuralData\FloorData.cs" />
+    <Compile Include="Data\StructuralData\WallData.cs" />
+    <Compile Include="Data\TeeFittingComponentData.cs" />
+    <Compile Include="Define.cs" />
+    <Compile Include="Geometry\CenterLineFactory\BarShapeFactory.cs" />
+    <Compile Include="Geometry\CenterLineFactory\CylinderFactory.cs" />
+    <Compile Include="Geometry\CenterLineFactory\GeometryFactory.cs" />
+    <Compile Include="Geometry\CenterLineFactory\SlantedColumnFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\SelectionFilters.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BindableBase.cs" />
+    <Compile Include="UI\RelayCommand.cs" />
+    <Compile Include="UI\ViewModels\Converter\NotiRowHeightConverter.cs" />
+    <Compile Include="UI\ViewModels\Converter\NotiRowHiddenConverter.cs" />
+    <Compile Include="UI\ViewModels\Converter\NotiRowWightConverter.cs" />
+    <Compile Include="UI\ViewModels\Converter\NotiWidthConverterRailings.cs" />
+    <Compile Include="UI\ViewModels\Converter\RadioBoolToIntConverter.cs" />
+    <Compile Include="UI\ViewModels\Converter\RelativeWidthCoverter.cs" />
+    <Compile Include="UI\ViewModels\Interface\HandleWarning.cs" />
+    <Compile Include="UI\ViewModels\VMJoinGeometry\VMJoinGeometry.cs" />
+    <Compile Include="UI\ViewModels\VMConvertIFC\VMConvertIFCToRevit.cs" />
+    <Compile Include="UI\ViewModels\VMConvertIFC\VMConvertObject.cs" />
+    <Compile Include="UI\ViewModels\VMLicense\VMLicense.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingTabMain.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSetingRevitElement.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingCategory.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingGroup.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingGroupCondition.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingGroupSelection.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingLoadOption.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingMain.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingIfc.cs" />
+    <Compile Include="UI\ViewModels\VMMappingSetting\VMSettingRevit.cs" />
+    <Compile Include="UI\ViewModels\VMShowDialog\VMConvertManager.cs" />
+    <Compile Include="UI\ViewModels\VMShowDialog\VMElement.cs" />
+    <Compile Include="UI\ViewModels\VMShowDialog\VMRule.cs" />
+    <Compile Include="UI\Views\IFCConvertUI.xaml.cs">
+      <DependentUpon>IFCConvertUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\JoinGeometryUI.xaml.cs">
+      <DependentUpon>JoinGeometryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\LicenseUI\LicenseUI.xaml.cs">
+      <DependentUpon>LicenseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\ProgressBarLoadFamily.xaml.cs">
+      <DependentUpon>ProgressBarLoadFamily.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\ResultDialogUI\ElementView.xaml.cs">
+      <DependentUpon>ElementView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\SettingMappingUI.xaml.cs">
+      <DependentUpon>SettingMappingUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\SettingGroupUI\GroupConditionUI.xaml.cs">
+      <DependentUpon>GroupConditionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\SettingGroupUI\GroupSelectionUI.xaml.cs">
+      <DependentUpon>GroupSelectionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\SettingGroupUI\ShowGroupUI.xaml.cs">
+      <DependentUpon>ShowGroupUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\ResultDialogUI\ConvertManagerUI.xaml.cs">
+      <DependentUpon>ConvertManagerUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\ResultDialogUI\RuleView.xaml.cs">
+      <DependentUpon>RuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\ProgressBarConvert.xaml.cs">
+      <DependentUpon>ProgressBarConvert.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\Views\IFCConvertUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\JoinGeometryUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\LicenseUI\LicenseUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\ProgressBarLoadFamily.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\ResultDialogUI\ElementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\SettingMappingUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\SettingGroupUI\GroupConditionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\SettingGroupUI\GroupSelectionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\SettingGroupUI\ShowGroupUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\ResultDialogUI\ConvertManagerUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\ResultDialogUI\RuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\ProgressBarConvert.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterClean">
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2021\RevitAddin1.addin" />
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2021\RevitAddin1.dll" />
+  </Target>
+  <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

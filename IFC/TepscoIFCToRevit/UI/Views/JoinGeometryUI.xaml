@@ -1,0 +1,153 @@
+﻿<Window x:Class="TepscoIFCToRevit.UI.Views.JoinGeometryUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        KeyDown="window_KeyDown" Width="260" SizeToContent="Height"
+        Title="{Binding Tille}" Background="White" ResizeMode="NoResize" Name="window">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <!-- Define the NormalButtonStyle style -->
+            <Style x:Key="NormalButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="#607d8b" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="BorderBrush" Value="#607d8b" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Padding" Value="10,5" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Cursor" Value="Hand" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="2">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#78909C" />
+                                    <Setter Property="Foreground" Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#78909C" />
+                                    <Setter Property="Foreground" Value="Black" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Define the ComboBox style -->
+            <Style TargetType="ComboBox" x:Key="ComboBoxStyle">
+                <Setter Property="Foreground" Value="{Binding ForeGroundColor}" />
+                <Setter Property="Background" Value="White" />
+                <Setter Property="BorderBrush" Value="Gray" />
+                <Setter Property="BorderThickness" Value="1" />
+            </Style>
+
+            <!-- Define the ComboBoxItem style -->
+            <Style TargetType="ComboBoxItem" x:Key="ComboBoxItemStyle">
+                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ComboBoxItem">
+                            <Border x:Name="Border" Background="White" BorderBrush="Gray" BorderThickness="0,0,0,1">
+                                <TextBlock Text="{Binding ParamName}" Padding="5" Foreground="{Binding ForeGroundColor}" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="LightGray" />
+                                </Trigger>
+                                <Trigger Property="IsHighlighted" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="LightGray" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="{Binding Category1}"
+                   HorizontalContentAlignment="Left" VerticalAlignment="Center" />
+        <ComboBox Grid.Column="1" Grid.Row="0" Margin="5"
+                      VerticalAlignment="Center" Height="30"
+                      VerticalContentAlignment="Center"
+                      DisplayMemberPath="Key"
+                      SelectedValuePath="Key"
+                      Style="{StaticResource ComboBoxStyle}"
+                      ItemsSource="{Binding ComboBoxItems}"
+                      SelectedItem="{Binding SelectedType1}" />
+
+        <Label Grid.Column="0" Grid.Row="1" Content="{Binding Category2}"
+                   HorizontalContentAlignment="Left" VerticalAlignment="Center" />
+        <ComboBox Grid.Column="1" Grid.Row="1" Margin="5"
+                      VerticalAlignment="Center" Height="30"
+                      VerticalContentAlignment="Center"
+                      DisplayMemberPath="Key"
+                      SelectedValuePath="Key"
+                      ItemsSource="{Binding ComboBoxItems}"
+                      SelectedItem="{Binding SelectedType2}" />
+
+        <Label Grid.Column="0" Grid.Row="2" Content="{Binding Category3}"
+               HorizontalContentAlignment="Left" VerticalAlignment="Center" />
+        <ComboBox Grid.Column="1" Grid.Row="2" Margin="5"
+                      VerticalAlignment="Center" Height="30"
+                      VerticalContentAlignment="Center"
+                      DisplayMemberPath="Key"
+                      SelectedValuePath="Key"
+                      ItemsSource="{Binding ComboBoxItems}"
+                      SelectedItem="{Binding SelectedType3}" />
+
+        <Label Grid.Column="0" Grid.Row="3" Content="{Binding Category4}"
+               HorizontalContentAlignment="Left" VerticalAlignment="Center" />
+        <ComboBox Grid.Column="1" Grid.Row="3" Margin="5"
+                      VerticalAlignment="Center" Height="30"
+                      VerticalContentAlignment="Center"
+                      DisplayMemberPath="Key"
+                      SelectedValuePath="Key"
+                      ItemsSource="{Binding ComboBoxItems}"
+                      SelectedItem="{Binding SelectedType4}" />
+
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2"
+                    Orientation="Horizontal" FlowDirection="RightToLeft">
+
+            <Button Content="{Binding CancelContent}"
+                    Style="{StaticResource NormalButtonStyle}"
+                    Click="CloseButton"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="5" Padding="0" FontSize="12"
+                    Height="30" Width="90" />
+
+            <Button Content="{Binding ApplyContent}"
+                    Style="{StaticResource NormalButtonStyle}"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="5" Padding="0"  FontSize="12"
+                    Height="30"  Width="90"
+                    Command="{Binding JoinCommand}"
+                    CommandParameter="{Binding ElementName=window}" />
+        </StackPanel>
+    </Grid>
+</Window>

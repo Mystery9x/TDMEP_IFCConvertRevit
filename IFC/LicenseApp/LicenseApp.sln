@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseApp", "LicenseApp\LicenseApp.csproj", "{A867618A-120B-4049-BC7F-DE180CCFBE0E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TepscoLicense", "TepscoLicense\TepscoLicense.vdproj", "{22AA15B5-463E-4C9E-9732-11EC18CF8AE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A867618A-120B-4049-BC7F-DE180CCFBE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A867618A-120B-4049-BC7F-DE180CCFBE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A867618A-120B-4049-BC7F-DE180CCFBE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A867618A-120B-4049-BC7F-DE180CCFBE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22AA15B5-463E-4C9E-9732-11EC18CF8AE7}.Debug|Any CPU.ActiveCfg = Debug
+		{22AA15B5-463E-4C9E-9732-11EC18CF8AE7}.Release|Any CPU.ActiveCfg = Release
+		{22AA15B5-463E-4C9E-9732-11EC18CF8AE7}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F62B17F-C6E4-4CE7-9AA0-6351AFCD19D5}
+	EndGlobalSection
+EndGlobal

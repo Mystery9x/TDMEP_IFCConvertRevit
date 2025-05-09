@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>TepscoIFCToRevit</Name>
+    <Assembly>TepscoIFCToRevit/TepscoIFCToRevit.dll</Assembly>
+    <AddInId>964EF324-C3D2-4C5E-AE0D-27B683E3E978</AddInId>
+    <FullClassName>TepscoIFCToRevit.App</FullClassName>
+    <VendorId>54CA5DC2-AF40-43E1-85B1-A324CCD4854C</VendorId>
+    <VendorDescription>TepscoIFCToRevit</VendorDescription>
+  </AddIn>
+</RevitAddIns>
