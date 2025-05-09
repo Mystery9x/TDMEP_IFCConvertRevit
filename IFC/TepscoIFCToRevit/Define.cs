@@ -141,17 +141,8 @@ namespace TepscoIFCToRevit
 
         public const string TAB_HEADER_PIPE = "PIPE";
         public const string TAB_HEADER_DUCT = "DUCT";
-        public const string TAB_HEADER_STRUCTURALCOLUMNS = "STRUCTURAL COLUMNS";
-        public const string TAB_HEADER_COLUMNS = "COLUMNS";
-        public const string TAB_HEADER_FLOORS = "FLOOR";
-        public const string TAB_HEADER_WALLS = "壁";
-        public const string TAB_HEADER_STRUCTURALFRAMING = "構造フレーム";
-        public const string TAB_HEADER_CEILINGS = "天井";
-        public const string TAB_HEADER_PIPINGSUPPORT = "配管サポート";
-        public const string TAB_HEADER_ELECTRICALEQUIPMENT = "電気設備";
-        public const string TAB_HEADER_RAILINGS = "手すり";
-        public const string TAB_HEADER_PIPE_ACCESSORY = "バルブ";
-        public const string TAB_HEADER_OPENING = "貫通孔";
+        public const string TAB_HEADER_PIPINGSUPPORT = "PIPINGSUPPORT";
+        public const string TAB_HEADER_ELECTRICALEQUIPMENT = "ELECTRICALEQUIPMENT";
 
         public static string GetCategoryLabel(BuiltInCategory builtInCategory)
         {
@@ -160,18 +151,9 @@ namespace TepscoIFCToRevit
                 case BuiltInCategory.INVALID: return string.Empty;
                 case BuiltInCategory.OST_PipeCurves: return Define.TAB_HEADER_PIPE;
                 case BuiltInCategory.OST_DuctCurves: return Define.TAB_HEADER_DUCT;
-                case BuiltInCategory.OST_StructuralColumns: return Define.TAB_HEADER_STRUCTURALCOLUMNS;
-                case BuiltInCategory.OST_Columns: return Define.TAB_HEADER_COLUMNS;
-                case BuiltInCategory.OST_Floors: return Define.TAB_HEADER_FLOORS;
-                case BuiltInCategory.OST_Walls: return Define.TAB_HEADER_WALLS;
-                case BuiltInCategory.OST_StructuralFraming: return Define.TAB_HEADER_STRUCTURALFRAMING;
-                case BuiltInCategory.OST_Ceilings: return Define.TAB_HEADER_CEILINGS;
                 case BuiltInCategory.OST_GenericModel: return Define.TAB_HEADER_PIPINGSUPPORT;
                 case BuiltInCategory.OST_ElectricalEquipment: return Define.TAB_HEADER_ELECTRICALEQUIPMENT;
-                case BuiltInCategory.OST_Railings: return Define.TAB_HEADER_RAILINGS;
                 case BuiltInCategory.OST_CableTray: return Define.TAB_HEADER_CABLETRAY;
-                case BuiltInCategory.OST_PipeAccessory: return Define.TAB_HEADER_PIPE_ACCESSORY;
-                case BuiltInCategory.OST_ShaftOpening: return Define.TAB_HEADER_OPENING;
                 default: return string.Empty;
             }
         }

@@ -569,7 +569,7 @@
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <TextBlock Text="-- オブジェクトのタイプを選択する --"
+                                    <TextBlock Text="Select the type of object"
                                                Foreground="#9E9E9E"
                                                VerticalAlignment="Center"
                                                Visibility="{Binding VisibilityHint, UpdateSourceTrigger=PropertyChanged}" />

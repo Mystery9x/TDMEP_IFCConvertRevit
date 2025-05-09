@@ -68,6 +68,18 @@ namespace TepscoIFCToRevit.UI.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            OpenFile();
+        }
+
+        public static void OpenFile()
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Title = "Excelファイルを選択",
+                Filter = "Excel Files|*.xlsx;*.xls|All Files|*.*",
+                FilterIndex = 1,
+                DefaultExt = ".xlsx"
+            };
         }
     }
 }
