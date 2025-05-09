@@ -18,10 +18,6 @@ namespace TepscoIFCToRevit.UI.Views
             {
                 cb_Mep.SelectedIndex = 0;
             }
-            if (cb_Structural.Items?.Count > 0)
-            {
-                cb_Structural.SelectedIndex = 0;
-            }
         }
 
         private void IFCConvertDlg_KeyDown(object sender, KeyEventArgs e)
@@ -68,6 +64,10 @@ namespace TepscoIFCToRevit.UI.Views
                     }
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

@@ -128,22 +128,22 @@ namespace TepscoIFCToRevit
 
         public List<string> NAME_FAMILY_PIPE_SUPPORT = new List<string>()
         {
-            "ケーブルトレイサポート_H形鋼",
-            "ケーブルトレイサポート_不等辺山形鋼",
-            "ケーブルトレイサポート_溝形鋼",
-            "ケーブルトレイサポート_等辺山形鋼",
-            "ケーブルトレイサポート_角形鋼管(正方形)",
+        "ケーブルトレイサポート_H形鋼",
+        "ケーブルトレイサポート_不等辺山形鋼",
+        "ケーブルトレイサポート_溝形鋼",
+        "ケーブルトレイサポート_等辺山形鋼",
+        "ケーブルトレイサポート_角形鋼管(正方形)",
         };
 
         #endregion NameFamilyPipeSupport
 
         #region Tab Headers
 
-        public const string TAB_HEADER_PIPE = "配管";
-        public const string TAB_HEADER_DUCT = "ダクト";
-        public const string TAB_HEADER_STRUCTURALCOLUMNS = "構造柱";
-        public const string TAB_HEADER_COLUMNS = "柱";
-        public const string TAB_HEADER_FLOORS = "床";
+        public const string TAB_HEADER_PIPE = "PIPE";
+        public const string TAB_HEADER_DUCT = "DUCT";
+        public const string TAB_HEADER_STRUCTURALCOLUMNS = "STRUCTURAL COLUMNS";
+        public const string TAB_HEADER_COLUMNS = "COLUMNS";
+        public const string TAB_HEADER_FLOORS = "FLOOR";
         public const string TAB_HEADER_WALLS = "壁";
         public const string TAB_HEADER_STRUCTURALFRAMING = "構造フレーム";
         public const string TAB_HEADER_CEILINGS = "天井";
